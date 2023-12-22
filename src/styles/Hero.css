@@ -99,13 +99,14 @@
   }
 
   .hero-container h1 {
-    font-size: 33px;
-    line-height: 70px;
-    line-height: 30px;
+    text-align: center;
+    font-size: 38px;
+    line-height: 35px;
   }
 
   .hero-text-container {
     margin-right: 0px;
+    text-align: center;
   }
 
   .hero-container p {

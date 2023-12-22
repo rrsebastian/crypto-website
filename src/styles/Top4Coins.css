@@ -60,7 +60,10 @@
   font-weight: 700;
 }
 
-.market-backgrround-wrapper {
+
+/* market background */
+
+.market-background-wrapper {
   background-color: hsl(240, 5%, 8%);
   width: 100%;
   display: flex;

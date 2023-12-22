@@ -7,7 +7,6 @@ import "./styles/Hero.css";
 import CoinMarket from "./Components/Market";
 import "./styles/Top4Coins.css";
 import "./styles/MarketUpdate.css";
-import "./styles/CoinInfo.css";
 import HowItWorks from "./Components/HowItWorks";
 import "./styles/HowItWorks.css";
 import WhatIsCryptex from "./Components/WhatIsCryptex";

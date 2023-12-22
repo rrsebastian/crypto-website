@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 function MarketUpdate({ data, formatAsPercent, currencyFormat }) {
   const [scrollPosition, setScrollPosition] = useState(0);

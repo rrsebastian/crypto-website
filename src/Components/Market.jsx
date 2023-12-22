@@ -54,7 +54,7 @@ function CoinMarket() {
   return (
     <div
       id="whole-market-container"
-      className="market-backgrround-wrapper"
+      className="market-background-wrapper"
       ref={backgroundWrapperRef}
     >
       <div className="market-wrapper">
