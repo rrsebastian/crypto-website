@@ -41,7 +41,7 @@ function MarketUpdate({ data, formatAsPercent, currencyFormat }) {
             <th>#</th>
             <th className="name">Name</th>
             <th>Last Price</th>
-            <th>24h %</th>
+            <th className="coin-precentage-change">24h %</th>
             <th>Market Cap</th>
           </tr>
         </thead>
@@ -67,6 +67,7 @@ function MarketUpdate({ data, formatAsPercent, currencyFormat }) {
                     {currencyFormat(coin.current_price)}
                   </td>
                   <td
+                    className="coin-precentage-change"
                     style={{
                       color: coin.price_change_percentage_24h
                         .toString()

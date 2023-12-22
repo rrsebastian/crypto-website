@@ -56,8 +56,11 @@
 .table th,
 .table td {
   width: 20%;
-  text-align: left;
   padding: 30px;
+}
+
+.headers {
+  text-align: left;
 }
 
 .table th {
@@ -84,6 +87,10 @@
 .current-price,
 .market-cap {
   font-weight: 700;
+}
+
+.coin-precentage-change {
+  text-align: center;
 }
 
 @media(max-width: 1500px) {
