@@ -130,12 +130,22 @@
   .connect-line1 {
     top: initial;
     bottom: 29%;
-    left: 39%;
+    left: 41%;
+    width: 140px;
   }
 
   .connect-line2 {
-    left: 39%;
+    left: 41%;
     top: 16%;
+    width: 140px;
+  }
+}
+
+@media (max-width: 960px) {
+
+  .connect-line1,
+  .connect-line2 {
+    left: 40%;
   }
 }
 
