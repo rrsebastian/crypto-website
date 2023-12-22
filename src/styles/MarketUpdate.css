@@ -1,0 +1,133 @@
+.market-container {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 1.0s ease, transform 1.0s ease;
+}
+
+.market-update-h1 {
+  font-size: 45px;
+}
+
+
+.coin-data-container:hover {
+  .coin-logo-name p {
+    color: hsl(222, 100%, 61%);
+    transition: color 0.4s ease;
+  }
+}
+
+.coin-data-container img {
+  width: 30px;
+}
+
+.coin-data-container:hover {
+  background-color: hsla(222, 100%, 61%, 0.05);
+  transition: all 0.4s ease;
+}
+
+.coin-logo-name-wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.coin-link {
+  text-decoration: none;
+}
+
+.coin-logo-name-wrapper span {
+  color: hsl(223, 10%, 52%);
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.coin-name:hover {
+  color: hsl(222, 100%, 61%);
+  transition: color 0.3s ease;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.table th,
+.table td {
+  width: 20%;
+  text-align: left;
+  padding: 30px;
+}
+
+.table th {
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+
+}
+
+.table td {
+  border-bottom: 1px solid hsl(225, 15%, 16%);
+}
+
+.position-num {
+  font-weight: 700;
+}
+
+.coin-name {
+  font-size: 18px;
+  width: 130px;
+  margin: 0px 12px;
+}
+
+
+.current-price,
+.market-cap {
+  font-weight: 700;
+}
+
+@media(max-width: 1500px) {
+  .market-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1005px) {
+  .market-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .market-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .table th,
+  .table td {
+    padding: 30px 20px;
+  }
+
+  .coin-logo-name-wrapper img {
+    margin-right: 3px;
+    margin-left: 20px;
+  }
+
+  .coin-name {
+    font-size: 18px;
+    width: 130px;
+    margin: 0px 12px;
+  }
+
+  .coin-name span {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .position-num {
+    font-size: 18px;
+  }
+}

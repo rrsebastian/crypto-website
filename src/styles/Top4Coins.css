@@ -1,0 +1,147 @@
+.top-four {
+  border: 1px solid hsl(225, 15%, 16%);
+  background-color: hsl(228, 9%, 10%);
+  border-radius: 30px;
+  margin: 100px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1280px;
+  transform: translateY(30%);
+  opacity: 0;
+  transition: opacity 1.0s ease, transform 1.0s ease
+}
+
+.coin-img {
+  width: 30px;
+}
+
+.top4-coin-name {
+  font-size: 17px;
+  margin: 0px 12px;
+}
+
+.coin-symbol {
+  font-weight: 700;
+  color: rgb(194, 194, 194);
+}
+
+.coin-logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.coin-container {
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.current-coin-price {
+  margin-top: 7px;
+}
+
+.precent-change-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.coin-container:hover {
+  background-color: hsla(230, 16%, 22%, 0.5);
+  transition: all 0.3s ease;
+}
+
+.precent-change {
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.market-backgrround-wrapper {
+  background-color: hsl(240, 5%, 8%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.market-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 1500px) {
+  .top-four {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+
+  }
+
+  .coin-container {
+    width: 100%;
+
+  }
+
+  /* Market wrappeer is the style for the parent contrainer of both tables CoinMarket.jsx is the file where the classname is declared  */
+
+  .market-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+}
+
+@media (max-width: 1215px) {
+
+  .market-wrapper {
+    width: 950px;
+  }
+}
+
+@media (max-width: 1005px) {
+  .market-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  .top-four {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+  }
+
+  .coin-container {
+    width: 100%;
+  }
+
+  .market-wrapper {
+    width: 95%;
+  }
+
+  .coin-img {
+    width: 20px;
+  }
+
+  .top4-coin-name {
+    font-size: 15px;
+  }
+
+  .coin-symbol {
+    font-size: 15px;
+  }
+
+  .current-coin-price {
+    font-size: 24px;
+  }
+
+  .hrs-change {
+    font-size: 15px;
+  }
+
+}

@@ -1,0 +1,139 @@
+.mobile-app-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 90px;
+  max-width: 1280px;
+  width: 100%;
+  transform: translateY(10%);
+  opacity: 0;
+  transition: opacity 1.0s ease, transform 1.0s ease;
+  justify-content: space-between;
+}
+
+.text-container h2 {
+  font-size: 25px;
+}
+
+.text-wrapper h1 {
+  line-height: 55px;
+}
+
+.app-banner {
+  position: relative;
+  margin-top: 11px;
+}
+
+.scan-btn {
+  position: absolute;
+  top: 10%;
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+
+}
+
+.app-google-store {
+  margin-top: 30px;
+}
+
+.app-store-img {
+  margin-left: 20px;
+}
+
+.google-play-img,
+.app-store-img {
+  cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+  .mobile-app-container {
+    width: 90%;
+  }
+
+  .text-wrapper {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1215px) {
+  .mobile-app-container {
+    width: 950px;
+    align-items: end;
+    gap: 30px;
+  }
+
+  .mobile-img {
+    width: 500px;
+  }
+
+  .text-wrapper {
+    padding-bottom: 70px;
+  }
+
+  .app-banner {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .text-wrapper h1 {
+    font-size: 42px;
+    line-height: 45px;
+
+  }
+
+  .text-wrapper h2 {
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1005px) {
+  .mobile-app-container {
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
+
+  .mobile-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .mobile-app-container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 30px 0px;
+    padding-bottom: 0px;
+    gap: initial;
+    width: 95%;
+  }
+
+  .text-wrapper h1 {
+    line-height: normal;
+    font-size: 32px;
+  }
+
+  .text-wrapper h2 {
+    font-size: 18px;
+  }
+
+  .text-container {
+    padding: 0px;
+  }
+
+  .scan-btn {
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+
+  .google-play-img,
+  .app-store-img {
+    width: 110px;
+  }
+
+  .app-banner {
+    margin-top: 30px;
+  }
+}

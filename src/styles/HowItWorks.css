@@ -1,0 +1,171 @@
+.steps-container {
+  padding: 90px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 1.0s ease, transform 1.0s ease;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.steps-container h1 {
+  font-size: 50px;
+}
+
+.how-it-works-description {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 8px;
+  color: hsl(227, 13%, 73%);
+  line-height: 30px;
+}
+
+.steps-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.step-text-container {
+  max-width: 220px;
+}
+
+
+.steps-wrapper h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.step-order-text {
+  font-size: 13px;
+  color: hsl(227, 13%, 73%);
+}
+
+.card-text {
+  color: hsl(227, 13%, 73%);
+}
+
+.connect-line1,
+.connect-line2,
+.connect-line3 {
+  top: 50px;
+  position: absolute;
+}
+
+.connect-line1 {
+  left: 210px;
+}
+
+.connect-line2 {
+  left: 560px;
+}
+
+.connect-line3 {
+  right: 200px;
+}
+
+.step-text-container:hover {
+  .steps-imgs {
+    transform: translateY(-15px);
+    transition: all ease 0.3s;
+  }
+}
+
+@media(max-width: 1500px) {
+  .steps-container {
+    width: 90%;
+  }
+
+  .steps-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    place-items: center;
+  }
+
+  .connect-line3 {
+    display: none;
+  }
+
+  .step-text-container {
+    max-width: 900px;
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .steps-container {
+    width: 90%;
+  }
+
+  .connect-line1 {
+    top: initial;
+    bottom: 29%;
+    left: 41.8%;
+  }
+
+  .connect-line2 {
+    left: 41.8%;
+    top: 16%;
+  }
+}
+
+@media (max-width:1215px) {
+  .steps-container {
+    width: 950px;
+  }
+}
+
+@media (max-width: 1005px) {
+  .steps-container {
+    width: 80%;
+  }
+
+  .connect-line1 {
+    top: initial;
+    bottom: 29%;
+    left: 39%;
+  }
+
+  .connect-line2 {
+    left: 39%;
+    top: 16%;
+  }
+}
+
+@media (max-width: 800px) {
+  .steps-container {
+    padding-bottom: 60px;
+    width: 95%;
+  }
+
+  .steps-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .connect-line1,
+  .connect-line2,
+  .connect-line3 {
+    display: none;
+  }
+
+  .steps-container h1 {
+    font-size: 32px;
+  }
+
+  .how-it-works-description {
+    font-size: 19px;
+  }
+
+  .step-text-container {
+    margin-bottom: 30px;
+    max-width: 350px;
+  }
+}
