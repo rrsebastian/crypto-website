@@ -88,9 +88,13 @@ function MarketUpdate({ data, formatAsPercent, currencyFormat }) {
               })}
           </tbody>
         ) : (
-          <div className="loading-container">
-            <l-bouncy size="45" speed="1.75" color="black"></l-bouncy>
-          </div>
+          <tbody className="loading-container">
+            <tr>
+              <td className="loading-icon-container">
+                <l-bouncy size="75" speed="1.75" color="white" />
+              </td>
+            </tr>
+          </tbody>
         )}
       </table>
     </div>

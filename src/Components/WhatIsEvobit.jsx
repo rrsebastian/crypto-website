@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import laptopImg from "../assets/about-banner.png";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 
-function WhatIsCryptex() {
+function WhatIsCryptex({ data }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showWhatIsSection, setShowWhatIsSection] = useState(false);
 
@@ -20,7 +20,9 @@ function WhatIsCryptex() {
   }, []);
 
   useEffect(() => {
-    if (scrollPosition >= 2300) {
+    if (data && scrollPosition >= 2300) {
+      setShowWhatIsSection(true);
+    } else if (!data && scrollPosition >= 1600) {
       setShowWhatIsSection(true);
     } else {
       setShowWhatIsSection(false);

@@ -6,7 +6,7 @@ import instruction2 from "../assets/instruction-2.png";
 import instruction3 from "../assets/instruction-3.png";
 import instruction4 from "../assets/instruction-4.png";
 
-function HowItWorks() {
+function HowItWorks({ data }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showHowItWorks, setShowHowItWorks] = useState(false);
 
@@ -24,7 +24,9 @@ function HowItWorks() {
   }, []);
 
   useEffect(() => {
-    if (scrollPosition >= 1700) {
+    if (data && scrollPosition >= 1700) {
+      setShowHowItWorks(true);
+    } else if (!data && scrollPosition >= 950) {
       setShowHowItWorks(true);
     } else {
       setShowHowItWorks(false);

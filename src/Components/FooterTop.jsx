@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
 
-function FooterTop() {
+function FooterTop({ data }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showContainer, setShowContainer] = useState(false);
 
@@ -19,7 +19,9 @@ function FooterTop() {
   }, []);
 
   useEffect(() => {
-    if (scrollPosition >= 3450) {
+    if (data && scrollPosition >= 3450) {
+      setShowContainer(true);
+    } else if (!data && scrollPosition >= 2800) {
       setShowContainer(true);
     } else {
       setShowContainer(false);
