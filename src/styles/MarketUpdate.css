@@ -93,6 +93,11 @@
   text-align: center;
 }
 
+.loading-container {
+  width: 100%;
+  height: 650px;
+}
+
 @media(max-width: 1500px) {
   .market-container {
     width: 100%;
