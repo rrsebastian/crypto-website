@@ -2,10 +2,10 @@ import React from "react";
 import FooterTop from "./FooterTop";
 import FooterBottom from "./FooterBottom";
 
-function Footer() {
+function Footer({ isSmallScreen, data }) {
   return (
     <>
-      <FooterTop />
+      <FooterTop isSmallScreen={isSmallScreen} data={data} />
       <FooterBottom />
     </>
   );

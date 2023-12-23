@@ -24,7 +24,7 @@ function WhatIsCryptex({ data, isSmallScreen }) {
       setShowWhatIsSection(true);
     } else if (!data && scrollPosition >= 1600) {
       setShowWhatIsSection(true);
-    } else if (isSmallScreen && scrollPosition >= 3920) {
+    } else if (isSmallScreen && scrollPosition >= 3900) {
       setShowWhatIsSection(true);
     } else {
       setShowWhatIsSection(false);

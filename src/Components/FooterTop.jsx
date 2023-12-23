@@ -4,6 +4,7 @@ import logo from "../assets/logo.svg";
 function FooterTop({ data, isSmallScreen }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showContainer, setShowContainer] = useState(false);
+  console.log(isSmallScreen);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +24,7 @@ function FooterTop({ data, isSmallScreen }) {
       setShowContainer(true);
     } else if (!data && scrollPosition >= 2800) {
       setShowContainer(true);
-    } else if (isSmallScreen && scrollPosition >= 5000) {
+    } else if (isSmallScreen && scrollPosition >= 5850) {
       setShowContainer(true);
     } else {
       setShowContainer(false);
