@@ -26,7 +26,7 @@ function HowItWorks({ data, isSmallScreen }) {
   useEffect(() => {
     if (!isSmallScreen && scrollPosition >= 1700) {
       setShowHowItWorks(true);
-    } else if (!data && scrollPosition >= 950) {
+    } else if (!data && scrollPosition >= 980) {
       setShowHowItWorks(true);
     } else if (isSmallScreen && scrollPosition >= 2400) {
       setShowHowItWorks(true);

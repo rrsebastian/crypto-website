@@ -20,7 +20,6 @@ function App() {
   const [data, setData] = useState(null);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isError, setIsError] = useState(false);
-  console.log(isError);
 
   const scrollToPosition = (position) => {
     window.scrollTo({
