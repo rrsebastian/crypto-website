@@ -4,7 +4,7 @@ import googlePlayImg from "../assets/googleplay.png";
 import appStoreImg from "../assets/appstore.png";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 
-function MobileAppSection({ data }) {
+function MobileAppSection({ data, isSmallScreen }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showContainer, setShowContainer] = useState(false);
 
@@ -22,9 +22,11 @@ function MobileAppSection({ data }) {
   });
 
   useEffect(() => {
-    if (data && scrollPosition >= 3000) {
+    if (!isSmallScreen && scrollPosition >= 3000) {
       setShowContainer(true);
     } else if (!data && scrollPosition >= 2300) {
+      setShowContainer(true);
+    } else if (isSmallScreen && scrollPosition >= 4900) {
       setShowContainer(true);
     } else {
       setShowContainer(false);

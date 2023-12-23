@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "ldrs/bouncy";
 
-function MarketUpdate({ data, formatAsPercent, currencyFormat }) {
+function MarketUpdate({ data, formatAsPercent, currencyFormat, isError }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showMarketContainer, setShowMarketContainer] = useState(false);
 
@@ -46,7 +46,7 @@ function MarketUpdate({ data, formatAsPercent, currencyFormat }) {
             <th>Market Cap</th>
           </tr>
         </thead>
-        {data ? (
+        {!isError ? (
           <tbody>
             {data &&
               data.slice(0, 8).map((coin, index) => {

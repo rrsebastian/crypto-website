@@ -4,7 +4,7 @@ import "./styles/App.css";
 import "./styles/Header.css";
 import Hero from "./Components/Hero";
 import "./styles/Hero.css";
-import CoinMarket from "./Components/Market";
+import Market from "./Components/Market";
 import "./styles/Top4Coins.css";
 import "./styles/MarketUpdate.css";
 import HowItWorks from "./Components/HowItWorks";
@@ -18,6 +18,9 @@ import "./styles/Footer.css";
 
 function App() {
   const [data, setData] = useState(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isError, setIsError] = useState(false);
+  console.log(isError);
 
   const scrollToPosition = (position) => {
     window.scrollTo({
@@ -27,28 +30,49 @@ function App() {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch();
-        // "/api/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en"
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.log(error);
-      }
+    fetch(
+      "/api/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en"
+    )
+      .then((response) => {
+        if (!response.ok) {
+          setIsError(true);
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        return response.json();
+      })
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        console.error("Fetch Error:", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isSmall = window.innerWidth < 800;
+      setIsSmallScreen(isSmall);
     };
-    fetchData();
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
     <div className="container">
       <Header scrollToPosition={scrollToPosition} />
       <Hero scrollToPosition={scrollToPosition} />
-      <CoinMarket data={data} />
-      <HowItWorks data={data} />
-      <WhatIsEvobit data={data} />
-      <MobileAppSection data={data} />
-      <Footer data={data} />
+      <Market isError={isError} data={data} />
+      <HowItWorks isSmallScreen={isSmallScreen} data={data} />
+      <WhatIsEvobit isSmallScreen={isSmallScreen} data={data} />
+      <MobileAppSection isSmallScreen={isSmallScreen} data={data} />
+      <Footer isSmallScreen={isSmallScreen} data={data} />
     </div>
   );
 }

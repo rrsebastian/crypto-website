@@ -6,7 +6,7 @@ import instruction2 from "../assets/instruction-2.png";
 import instruction3 from "../assets/instruction-3.png";
 import instruction4 from "../assets/instruction-4.png";
 
-function HowItWorks({ data }) {
+function HowItWorks({ data, isSmallScreen }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showHowItWorks, setShowHowItWorks] = useState(false);
 
@@ -24,9 +24,11 @@ function HowItWorks({ data }) {
   }, []);
 
   useEffect(() => {
-    if (data && scrollPosition >= 1700) {
+    if (!isSmallScreen && scrollPosition >= 1700) {
       setShowHowItWorks(true);
     } else if (!data && scrollPosition >= 950) {
+      setShowHowItWorks(true);
+    } else if (isSmallScreen && scrollPosition >= 2400) {
       setShowHowItWorks(true);
     } else {
       setShowHowItWorks(false);

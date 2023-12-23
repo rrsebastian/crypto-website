@@ -98,12 +98,16 @@
   height: 80px;
 }
 
+
+
 .table .loading-icon-container {
   border-bottom: none;
   position: absolute;
-  left: 50%;
-  top: 100px;
+  left: 55%;
+  top: 70px;
   transform: translate(-50%, -50%);
+  display: flex;
+  padding: 0px;
 }
 
 
@@ -112,9 +116,6 @@
     width: 100%;
   }
 
-  .table .loading-icon-container {
-    left: 52%;
-  }
 }
 
 @media (max-width: 1005px) {
@@ -132,9 +133,6 @@
     top: 60px;
   }
 
-  .table .loading-icon-container {
-    left: 50%;
-  }
 }
 
 @media (max-width: 800px) {
@@ -169,15 +167,12 @@
     font-size: 18px;
   }
 
-  .table .loading-icon-container {
-    left: 50%;
-  }
 
 
 }
 
 @media (max-width: 555px) {
   .table .loading-icon-container {
-    left: 46%;
+    left: 52%;
   }
 }

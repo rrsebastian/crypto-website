@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Top4Coins from "./Top4Coins";
 import MarketUpdate from "./MarketUpdate";
 
-function CoinMarket({ data }) {
+function CoinMarket({ data, isError }) {
   const backgroundWrapperRef = useRef(null);
 
   useEffect(() => {
@@ -45,6 +45,7 @@ function CoinMarket({ data }) {
 
         <MarketUpdate
           data={data}
+          isError={isError}
           formatAsPercent={formatAsPercent}
           currencyFormat={currencyFormat}
         />
