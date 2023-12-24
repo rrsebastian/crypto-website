@@ -2,6 +2,7 @@
   opacity: 0;
   transform: translateY(10%);
   transition: opacity 1.0s ease, transform 1.0s ease;
+  position: relative;
 }
 
 .market-update-h1 {
@@ -94,7 +95,6 @@
 }
 
 .loading-container {
-  position: relative;
   height: 80px;
 }
 
@@ -104,9 +104,8 @@
   border-bottom: none;
   position: absolute;
   left: 50%;
-  top: 70px;
+  top: 90%;
   transform: translate(-50%, -50%);
-  display: flex;
   padding: 0px;
   width: 238px;
 }
