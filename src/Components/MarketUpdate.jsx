@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "ldrs/bouncy";
 
 function MarketUpdate({ data, formatAsPercent, currencyFormat, isError }) {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -91,7 +90,7 @@ function MarketUpdate({ data, formatAsPercent, currencyFormat, isError }) {
           <tbody className="loading-container">
             <tr>
               <td className="loading-icon-container">
-                <l-bouncy size="75" speed="1.75" color="white" />
+                <h3>Too many requests :(</h3>
               </td>
             </tr>
           </tbody>

@@ -103,11 +103,12 @@
 .table .loading-icon-container {
   border-bottom: none;
   position: absolute;
-  left: 55%;
+  left: 50%;
   top: 70px;
   transform: translate(-50%, -50%);
   display: flex;
   padding: 0px;
+  width: 238px;
 }
 
 
@@ -169,10 +170,4 @@
 
 
 
-}
-
-@media (max-width: 555px) {
-  .table .loading-icon-container {
-    left: 52%;
-  }
 }
