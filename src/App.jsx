@@ -21,6 +21,8 @@ function App() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isError, setIsError] = useState(false);
 
+  console.log(isError);
+
   const scrollToPosition = (position) => {
     window.scrollTo({
       top: position,
@@ -44,6 +46,7 @@ function App() {
         setData(data);
       })
       .catch((error) => {
+        setIsError(true);
         console.error("Fetch Error:", error);
       });
   }, []);
