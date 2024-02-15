@@ -8,9 +8,3 @@ The website is connected to the Coingecko API, which is a popular source of data
 
 Live Website - https://evobit.netlify.app/
 
-Built with:
-
-• React JS
-
-• Coingecko API
-
