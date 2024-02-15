@@ -10,7 +10,4 @@ Live Website - https://evobit.netlify.app/
 
 Built with:
 
-• React JS
-
-• Coingecko API
-
+• CoinGecko API
