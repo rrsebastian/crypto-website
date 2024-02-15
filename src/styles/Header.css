@@ -47,12 +47,12 @@
   list-style: none;
   font-weight: 700;
   padding: 15px 12px;
+  transition: all 0.4s ease-out;
 }
 
 .header-links li:hover {
   background-color: hsl(222, 100%, 61%);
   padding: 15px 12px;
-  transition: all 0.4s ease;
   cursor: pointer;
 }
 
@@ -62,12 +62,12 @@
   font-weight: 700;
   padding: 5px 12px;
   border-radius: 20px;
+  transition: all 0.4s ease-out;
 }
 
 .wallet-btn:hover {
   background-color: hsl(222, 100%, 61%);
   border-color: black;
-  transition: all 0.4s ease;
   cursor: pointer;
 }
 

@@ -31,7 +31,7 @@ function CoinMarket({ data, isError }) {
   }
 
   return (
-    <div
+    <section
       id="whole-market-container"
       className="market-background-wrapper"
       ref={backgroundWrapperRef}
@@ -50,7 +50,7 @@ function CoinMarket({ data, isError }) {
           currencyFormat={currencyFormat}
         />
       </div>
-    </div>
+    </section>
   );
 }
 

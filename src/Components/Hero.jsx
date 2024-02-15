@@ -22,7 +22,7 @@ function Hero({ scrollToPosition }) {
   }, []);
 
   return (
-    <div className="hero-container" ref={heroContainerRef}>
+    <section className="hero-container" ref={heroContainerRef}>
       <div className="hero-text-container">
         <h1>
           Buy & Sell Digital Assets In{" "}
@@ -60,7 +60,7 @@ function Hero({ scrollToPosition }) {
         </div>
       </div>
       <img className="hero-banner" src={HeroBanner} />
-    </div>
+    </section>
   );
 }
 

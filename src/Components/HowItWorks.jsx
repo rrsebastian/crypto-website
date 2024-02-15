@@ -36,7 +36,7 @@ function HowItWorks({ data, isSmallScreen }) {
   }, [scrollPosition]);
 
   return (
-    <div
+    <section
       id="how-it-works-container"
       style={{
         opacity: showHowItWorks && "1",
@@ -59,7 +59,7 @@ function HowItWorks({ data, isSmallScreen }) {
         <img className="connect-line3" src={connectLine} />
         <Step img={instruction4} order="Step 4" title="Earn Money" />
       </div>
-    </div>
+    </section>
   );
 }
 

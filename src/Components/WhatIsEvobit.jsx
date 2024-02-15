@@ -32,7 +32,7 @@ function WhatIsCryptex({ data, isSmallScreen }) {
   }, [scrollPosition]);
 
   return (
-    <div id="what-is-evobit" className="background-wrapper">
+    <section id="what-is-evobit" className="background-wrapper">
       <div
         style={{
           opacity: showWhatIsSection && "1",
@@ -90,7 +90,7 @@ function WhatIsCryptex({ data, isSmallScreen }) {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

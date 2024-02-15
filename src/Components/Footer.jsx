@@ -4,10 +4,10 @@ import FooterBottom from "./FooterBottom";
 
 function Footer({ isSmallScreen, data }) {
   return (
-    <>
+    <footer className="footer-container">
       <FooterTop isSmallScreen={isSmallScreen} data={data} />
       <FooterBottom />
-    </>
+    </footer>
   );
 }
 

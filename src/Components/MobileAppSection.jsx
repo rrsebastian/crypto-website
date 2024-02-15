@@ -34,7 +34,7 @@ function MobileAppSection({ data, isSmallScreen }) {
   }, [scrollPosition]);
 
   return (
-    <div
+    <section
       style={{
         opacity: showContainer && 1,
         transform: showContainer && "translateY(0)",
@@ -73,7 +73,7 @@ function MobileAppSection({ data, isSmallScreen }) {
         <button className="scan-btn">Scan To Download</button>
         <img className="mobile-img" src={mobileImg} />
       </div>
-    </div>
+    </section>
   );
 }
 

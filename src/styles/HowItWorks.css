@@ -36,6 +36,18 @@
   max-width: 220px;
 }
 
+.step-text-container {
+  .steps-imgs {
+    transition: all ease-out 0.3s;
+  }
+}
+
+.step-text-container:hover {
+  .steps-imgs {
+    transform: translateY(-15px);
+  }
+}
+
 
 .steps-wrapper h2 {
   margin-top: 10px;
@@ -71,12 +83,6 @@
   right: 200px;
 }
 
-.step-text-container:hover {
-  .steps-imgs {
-    transform: translateY(-15px);
-    transition: all ease 0.3s;
-  }
-}
 
 @media(max-width: 1500px) {
   .steps-container {
